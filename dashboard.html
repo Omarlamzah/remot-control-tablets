@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+</head>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+body {
+	  background:#074967 url(http://www.luismruiz.com/img/blured.jpg)no-repeat center center fixed;
+  	-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+    padding-top:100px;
+}
+p{margin: 0;}
+
+section {
+    margin-left:auto;
+    margin-right:auto;
+    width: 343px;
+    height: 333px;
+    padding:30px;
+    border: 1px solid rgba(0,0,0,.2);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: rgba(0, 0, 0, 0.5); 
+    -moz-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    overflow: hidden; 
+}
+
+textarea{
+	  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px; 
+    width: 276px;
+    height: 110px;
+    border: 1px solid rgba(255,255,255,.6);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; 
+    display:block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:18px;
+    color:#fff;
+    padding-left:45px;
+    padding-right:20px;
+    padding-top:12px;
+    margin-bottom:20px;
+    overflow:hidden;
+}
+
+input {
+    width: 276px;
+    height: 48px;
+    border: 1px solid rgba(255,255,255,.4);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; 
+    display:block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:18px;
+    color:#fff;
+    padding-left:20px;
+    padding-right:20px;
+    margin-bottom:20px;
+}
+
+input[type=submit] {
+    cursor:pointer;
+}
+
+input.name {
+	  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_name.png) no-repeat scroll 16px 16px; 
+	  padding-left:45px;
+}
+
+input.email {
+	  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_email.png) no-repeat scroll 16px 20px;
+	  padding-left:45px;
+}
+
+input.message {
+	  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_message.png) no-repeat scroll 16px 16px;
+	  padding-left:45px;
+}
+
+::-webkit-input-placeholder {
+	  color: #fff;
+}
+
+:-moz-placeholder{ 
+    color: #fff; 
+}
+
+::-moz-placeholder {
+    color: #fff;
+}
+
+:-ms-input-placeholder {  
+	  color: #fff; 
+}
+
+input:focus, textarea:focus { 
+	  background-color: rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+    -webkit-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+    box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+	  overflow: hidden; 
+}
+
+.btn {
+	  width: 138px;
+	  height: 44px;
+	  -moz-border-radius: 4px;
+	  -webkit-border-radius: 4px;
+	  border-radius: 4px;
+	  float:right;
+    border: 1px solid #253737;
+    background: #416b68;
+    background: -webkit-gradient(linear, left top, left bottom, from(#6da5a3), to(#416b68));
+    background: -webkit-linear-gradient(top, #6da5a3, #416b68);
+    background: -moz-linear-gradient(top, #6da5a3, #416b68);
+    background: -ms-linear-gradient(top, #6da5a3, #416b68);
+    background: -o-linear-gradient(top, #6da5a3, #416b68);
+    background-image: -ms-linear-gradient(top, #6da5a3 0%, #416b68 100%);
+    padding: 10.5px 21px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    -moz-box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    text-shadow: #333333 0 1px 0;
+    color: #e1e1e1;
+}
+
+.btn:hover {
+    border: 1px solid #253737;
+    text-shadow: #333333 0 1px 0;
+    background: #416b68;
+    background: -webkit-gradient(linear, left top, left bottom, from(#77b2b0), to(#416b68));
+    background: -webkit-linear-gradient(top, #77b2b0, #416b68);
+    background: -moz-linear-gradient(top, #77b2b0, #416b68);
+    background: -ms-linear-gradient(top, #77b2b0, #416b68);
+    background: -o-linear-gradient(top, #77b2b0, #416b68);
+    background-image: -ms-linear-gradient(top, #77b2b0 0%, #416b68 100%);
+    color: #fff;
+ }
+
+
+
+.margin35{
+    margin-left: 35px;
+}
+
+.margin55{
+    margin-left: 55px;
+}
+
+
+select{
+    width: 230px;
+    height: 52px;
+    background-color: white;
+    border-radius: 30px;
+   
+    margin: 20px auto ;
+    text-align: center;
+}
+
+.inputamodir{
+    width: 70px;
+    text-align: center;
+    background-color: #253737;
+}
+#contentorder{
+    width: 60%;
+    margin: auto;
+    
+}
+
+.paramodir{
+    font-size: 1.2rem;
+    color: white;
+}
+body{
+    margin: 0;
+    padding: 0;
+    padding: 25px;
+    padding-top: 0;
+}
+
+a{text-decoration: none;}
+
+.form-select{    width: 60%;
+    font-size: 1.5rem;
+    color: #2c3ae7;
+    font-family: cursive;}
+
+    .btnorganize {
+        background-color: #084298;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    margin: 4px;
+    padding: 8px;
+}
+.btnorganize:hover {background-color: #0957cc;}
+.inputamodir{
+    width: 50vw;
+}
+
+section{    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;}
+
+</style>
+<body>
+ <h1><a href="/">home</a></h1>   
+     
+  <h2 style="text-align: center;color: #0dcaf0;">moderateur</h2>
+
+
+ 
+<select style=" width: 60%;" class="form-select sljour"  id="selectjour">
+ 
+</select>
+
+
+<select  style=" width: 60%;" class="form-select"  name="" id="selectsesion">
+ 
+</select>
+
+<select  style=" width: 60%;"  class="form-select"  name="" id="selectmoderateur">
+ 
+</select>  
+
+<div id="contentorder">
+
+</div>
+<button class="btn btn-info" id="btnempty">vide</button>
+    <button class="btn btn-info" id="showmodirateur">afficher</button>
+    <button class="btn btn-info" id="btnprogrmme">prgramme</button>
+
+
+    <section class="crud">
+        <div>
+            <br><br><br>
+            <h5 style="text-align: center;color: #0dcaf0;">la modification</h5>
+            <p>je veux ajouter la</p>
+            <select id="selectoption" style=" width: 60%;" class="form-select">
+                    <option value="1">jours</option>
+                    <option value="2">sesion</option>
+                    <option value="3">modirateur</option>
+            </select>
+            <input id="inputvalue" type="text">
+            <button class="btnorganize" onclick="ajouter()">ajoute</button>
+            <button class="btnorganize"  onclick="sepremer()">supremer</button>
+            <button class="btnorganize" id="btnrefresh" >actualise</button>
+
+        </div>
+        
+        <article>
+            <select id="animoption" class="form-select">
+                <option value="animate-charcter">animation 1</option>
+                <option value="textanimation">animation 2</option>
+                <option value="text-shadow">animation 3</option>
+                <option value="box-with-text">animation 4</option>
+                <option value="apple">animation 5</option>
+                <option value="rmanim">remove all animation</option>
+            </select>
+
+            <select id="numtabanimiation" style=" width: 60%;" class="form-select">
+                <option value="1">tablet 1</option>
+                <option value="2">tablet 2</option>
+                <option value="3">tablet 3</option>
+                <option value="4">tablet 4</option>
+                <option value="5">tablet 5</option>
+                <option value="6">tablet 6</option>
+                <option value="7">tablet 7</option>
+                <option value="8">tablet 8</option>
+                <option value="9">tablet 9</option>
+                <option value="10">tablet 10</option>
+                <option value="11">tablet 11</option>
+                <option value="12">tablet 12</option>
+                <option value="13">tablet 13</option>
+                <option value="14">tablet 14</option>
+                <option value="0">vide</option>
+            </select>
+         <div>
+            <button onclick="setanimation()">set animimation</button>
+        </article>
+                <div   style="margin-top: 52px;">
+                    <article id="imgco" class="bag">
+                        <form action="/upload" method="post" enctype="multipart/form-data">
+                             <input style="width: 100%;"  type="file" name="img" id="url">
+                             <button style="width: 100%;" class="btn btn-info" type="submit">upload</button>
+                         </form>
+                        <input style="width: 100%;" type="text" name="" id="imgname">
+                         <select id="numtab" style=" width: 60%;" class="form-select">
+                             <option value="1">tablet 1</option>
+                             <option value="2">tablet 2</option>
+                             <option value="3">tablet 3</option>
+                             <option value="4">tablet 4</option>
+                             <option value="5">tablet 5</option>
+                             <option value="6">tablet 6</option>
+                             <option value="7">tablet 7</option>
+                             <option value="8">tablet 8</option>
+                             <option value="9">tablet 9</option>
+                             <option value="10">tablet 10</option>
+                             <option value="11">tablet 11</option>
+                             <option value="12">tablet 12</option>
+                             <option value="13">tablet 13</option>
+                             <option value="14">tablet 14</option>
+                             <option value="15">tablet 15</option>
+                         </select>
+                      <div>
+                        
+                         <button style="width: 50%;" onclick="bgchange()" class="btn btn-info" id="btntoutch" >changer </button>
+                         <button style="width: 50%;" onclick="bgtoutchange()" class="btn btn-info" id="bch" >changer tout</button>
+                      </div>
+                     </article> 
+                </div>
+    </section>
+    <iframe  width="100%" src="http://localhost:8080/page6" frameborder="0"></iframe>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="/uploads/jquery.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+   const socket =window.io() 
+
+   function setanimation(){
+    var animoption =document.getElementById("animoption").value
+
+    var tabletid =document.getElementById("numtabanimiation").value
+    socket.emit("setanimation",[animoption,numtabanimiation])
+   }
+
+//bg
+
+function bgchange(){
+   
+   socket.emit("bgcahne",[$("#imgname").val(),$("#numtab").val()] )
+
+   
+}
+
+function bgtoutchange(){
+    socket.emit("bgcahne",[$("#imgname").val()] )
+
+}
+//bg
+   var datofprogramme
+    var selectjour       =$("#selectjour")
+    var selectsesion     =$("#selectsesion")
+    var selectmoderateur =$("#selectmoderateur")
+
+    var lesseionfromserver;
+    var lesmoderateurfromserver;
+socket.emit("getjours")
+  socket.on("datafroserver",function(res){
+      datofprogramme=res
+      lesseionfromserver=res[res]
+      lesmoderateurfromserver=res[2]
+
+     
+for (let j = 0; j < datofprogramme[0].length; j++) {
+    var optionjour="<option value="+res[0][j].id+">"+res[0][j].name+"</option>"
+   
+    selectjour.append(optionjour)
+}
+for (let s = 0; s < datofprogramme[1].length; s++) {
+    var optionsess="<option value="+res[1][s].id+">"+res[1][s].namesesion+"</option>"
+    selectsesion.append(optionsess)
+}
+for (let m = 0; m < datofprogramme[2].length; m++) {
+    var optiomod="<option value="+res[2][m].id+">"+res[2][m].nommoderateur+"</option>"
+    selectmoderateur.append(optiomod)
+}
+      
+
+       console.log(datofprogramme)
+  })
+  
+  selectjour.click(function(event){
+  
+    selectsesion.empty()
+       
+
+       for (let s = 0; s <= datofprogramme[1].length; s++) {
+     
+       if(event.target.value==datofprogramme[1][s].idjour){
+        var optionsess="<option value="+datofprogramme[1][s].id+">"+datofprogramme[1][s].namesesion+"</option>"
+        console.log(datofprogramme[1][s].namesesion)
+        selectsesion.append(optionsess)
+       }  
+       else{
+      
+       }
+}
+
+  })
+
+  var lemSE=[]
+  selectsesion.click(function(event){
+
+    selectmoderateur.empty()
+    lemSE=[]
+      for (let k = 0; k < lesmoderateurfromserver.length; k++) {
+
+        if(event.target.value==lesmoderateurfromserver[k].idsession){
+        var optionsess="<option value="+lesmoderateurfromserver[k].id+">"+lesmoderateurfromserver[k].nommoderateur+"</option>"
+             selectmoderateur.append(optionsess)
+          lemSE.push(lesmoderateurfromserver[k].nommoderateur)
+       }
+
+      console.log(lemSE)
+    }
+        
+      
+        
+
+  })
+ 
+  
+  //order les modirateur
+var showmodirateur=$("#showmodirateur")
+var contentorder =$("#contentorder")
+showmodirateur.click(function(event){
+    contentorder.empty()
+    for (let m = 0; m < lemSE.length; m++) {  
+        var hr="<hr/>"
+        var sectior="<p class='paramodir'>"+lemSE[m]+"<p>" 
+        var inputmodi="<input  class='inputamodir '"+"inp"+m+1+"' type='text'/>" 
+        contentorder.append(hr)
+        contentorder.append(sectior)
+        contentorder.append(inputmodi)
+        
+    }  
+    var btnreorder="<button class='btnorganize' onclick='organise()'>organise</button>" 
+    var btnupdate="<button class='btnorganize' onclick='updateModirateur()'>modifier</button>" 
+  
+    contentorder.append(btnreorder)    
+    contentorder.append(btnupdate)     
+  })
+
+  //modifier
+  function updateModirateur(){
+
+    var inpss=document.getElementsByClassName("inputamodir")
+     var newaray=[]
+    for (let i = 0; i < inpss.length; i++) {
+     newaray[i]=inpss[i].value
+     console.log(newaray)
+    }
+
+    for (let k = 0; k < newaray.length; k++) {
+     
+    lemSE[k]=newaray[k]
+    }
+
+    console.log(lemSE)
+    
+  }
+  //modifier
+
+
+//change
+function organise(){
+    var inpss=document.getElementsByClassName("inputamodir")
+     var newaray=[]
+    for (let i = 0; i < inpss.length; i++) {
+     newaray[i]=lemSE[inpss[i].value-1]
+     console.log(newaray)
+    }
+
+    for (let k = 0; k < newaray.length; k++) {
+     
+    lemSE[k]=newaray[k]
+    }
+
+    console.log(lemSE)
+}
+//chang
+
+  //order les modirateur
+
+  $("#btnprogrmme").click(function(){
+    socket.emit("lesnom",lemSE)
+})
+
+$("#btnempty").click(function(){
+    socket.emit("removp")
+
+})
+$("#btnrefresh").click(function(){
+    location.reload();
+
+})
+
+//modification
+function ajouter(){
+    var selectoption=document.getElementById("selectoption").value
+    var inputadd= document.getElementById("inputvalue").value
+    var jourV=document.getElementById("selectjour").value
+    var sesionV=document.getElementById("selectsesion").value
+    
+
+
+    
+    if(selectoption==1){
+        socket.emit("addday",[inputadd])
+     
+    }
+    if(selectoption==2){
+       
+        socket.emit("addsession",[inputadd,jourV])
+
+
+    }
+    if(selectoption==3){
+        socket.emit("addmodirationDB",[inputadd,sesionV])
+      
+    }
+
+}
+
+
+function sepremer(){
+    var selectoption=document.getElementById("selectoption").value
+    var inputadd= document.getElementById("inputvalue").value
+    var jourV=document.getElementById("selectjour")
+    var sesionV=document.getElementById("selectsesion")
+    var modir=document.getElementById("selectmoderateur")
+    
+
+
+    var jorss=$(".sljour").val();
+    if(selectoption==1){
+        socket.emit("removerjour",jourV.options[jourV.selectedIndex].innerText)
+    
+    }
+    if(selectoption==2){
+       
+        socket.emit("removersesion",sesionV.options[sesionV.selectedIndex].innerText)
+       
+    }
+    if(selectoption==3){
+        socket.emit("removemodirateur",modir.options[modir.selectedIndex].innerText)
+       
+    }
+}
+
+//modification
+
+
+
+$.get(
+    {
+        url:"imgs",
+        success:function(data){
+            console.log(data)
+        }
+    }
+)
+</script>
+
+</html>

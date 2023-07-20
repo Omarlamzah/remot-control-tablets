@@ -1,0 +1,8 @@
+this application for managment tablet of modiratreur
+so how it use
+1 open project and press startserver.bat
+2 open xamp and creat new database name is moderateurdb utf8mbc4generate_ci
+    import file db.sql into xamp
+
+3 open browser set url localhost:8080
+4 open in tablet url localhost:8080/page1 or page 2 or page3

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+    <title>amoderateur</title>
+
+</head>
+<style>
+    h2{    text-align: center;
+    color: aquamarine;
+    margin: 20px;}
+    button{margin-left: 45%; margin-bottom: 10px; margin-top: 20px;}
+
+  .contentm{
+  
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 15vh;
+    background-color:transparent;
+
+  }
+  p{margin: 0;    margin-top: 30px;}
+
+.sml1{
+    width: 50%;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.sml2{
+    width: 23%;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.sml3{width: 13%;}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.names,.sml2{
+   background-color: transparent;
+
+   background-color: rgb(255 255 255 / 80%);
+    border: 0;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    border-right: 1px solid white;
+    border-bottom-left-radius: 23%;
+
+    color: rgb(0, 0, 0);
+    margin: 10px;
+ width: 240px;
+}
+option{background-color: rgb(117, 91, 91);}
+nav{
+    background-color: green;
+    padding: 1px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 7px;
+}
+
+p{
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+    color: aquamarine;
+    color: #080a09;
+    font-weight: 700;
+}
+
+
+body{
+  
+    background-image: url(aaaaaaaaaaaaaffiche.jpg);
+    background-repeat: no-repeat;
+    color: white;
+    background-size: 100% 100%;
+    background-color: cadetblue;
+   
+}
+
+
+.button1 {
+    margin: 0;
+
+
+  
+}
+
+#numchar{
+    margin: 10px 0;
+}
+
+
+.hidediv{
+  display: none;
+}
+
+
+
+.w300px{
+  width: 300px;
+}
+
+</style>
+
+<body>
+
+
+  <div>
+    <button onclick="addModerateur()" style="margin: 0; background-color: blue; color: white; padding: 10px; border: none; cursor: pointer;">ajouter Moderator</button>
+    <button onclick="removeModerateur()" style=" margin: 0; background-color: red; color: white; padding: 10px; border: none; cursor: pointer;">supprimer Moderator</button>
+  </div>
+  
+    
+
+
+
+    <section class="contentm container">
+        
+        
+ 
+        <div >  
+          <div class=" flex moderateur-div"><p> moderateur :1</p>
+              <input onkeypress="sendmodirateur(1,event)" class="sml1 form-control names"  placeholder="nom 1" type="text" name="" id="n1"> 
+               <input oninput="sendfontsize(1,this,event)" class="w300px" type="range" min="0" max="300" name="" id="" placeholder="fontsize">
+              <input oninput="sendmargin(1,event)" class="w300px" type="range" max="50" min="0" name="" id="n1"> 
+           
+            <select onchange="sendspisfivtext(event,0)" name="selecttext" id="">
+              <option value="1">tabelt 1</option>
+              <option value="2">tabelt 2</option>
+              <option value="3">tabelt 3</option>
+              <option value="4">tabelt 4</option>
+              <option value="5">tabelt 5</option>
+              <option value="6">tabelt 6</option>
+              <option value="7">tabelt 7</option>
+            </select>
+           
+            </div>
+     
+           <div class="hidediv flex moderateur-div">     <p>moderateur :2</p>
+               <input onkeypress="sendmodirateur(2,event)"  class="sml1 form-control names" placeholder="nom 2" type="text" name="" id="n2"> 
+               <input oninput="sendfontsize(2,this,event)"  class="w300px" type="range" min="0" max="300" name="" id="" placeholder="fontsize">
+               <input oninput="sendmargin(2,event)" class="w300px" type="range" max="50" min="0" name="" id="n1"> 
+          
+               <select onchange="sendspisfivtext(event,1)" name="selecttext" id="">
+                <option value="1">tabelt 1</option>
+                <option value="2">tabelt 2</option>
+                <option value="3">tabelt 3</option>
+                <option value="4">tabelt 4</option>
+                <option value="5">tabelt 5</option>
+                <option value="6">tabelt 6</option>
+                <option value="7">tabelt 7</option>
+              </select>
+             
+
+
+
+           </div>
+           <div class="hidediv flex moderateur-div"><p>moderateur :3</p>
+               <input onkeypress="sendmodirateur(3,event)" class="  sml1 form-control names" placeholder="nom 3" type="text" name="" id="n3"> <input  class="w300px"   oninput="sendfontsize(3,this,event)"  min="0" max="300"  type="range" name="" id="" placeholder="fontsize">
+               <input oninput="sendmargin(3,event)" class="w300px" type="range" max="50" min="0" name="" id="n1"> 
+ 
+               <select onchange="sendspisfivtext(event,2)" name="selecttext" id="">
+                <option value="1">tabelt 1</option>
+                <option value="2">tabelt 2</option>
+                <option value="3">tabelt 3</option>
+                <option value="4">tabelt 4</option>
+                <option value="5">tabelt 5</option>
+                <option value="6">tabelt 6</option>
+                <option value="7">tabelt 7</option>
+              </select>
+             
+
+
+
+
+           </div>
+           <div class="hidediv flex moderateur-div"><p>moderateur :4</p>
+               <input onkeypress="sendmodirateur(4,event)" class="sml1 form-control names"  placeholder="nom 4" type="text" name="" id="n4">
+               <input oninput="sendfontsize(4,this,event)"  class="w300px" min="0" max="300" type="range" name="" id="" placeholder="fontsize">
+               <input oninput="sendmargin(4,event)"  class="w300px" type="range" max="50" min="0" name="" id="n1"> 
+ 
+               <select onchange="sendspisfivtext(event,3)" name="selecttext" id="">
+                <option value="1">tabelt 1</option>
+                <option value="2">tabelt 2</option>
+                <option value="3">tabelt 3</option>
+                <option value="4">tabelt 4</option>
+                <option value="5">tabelt 5</option>
+                <option value="6">tabelt 6</option>
+                <option value="7">tabelt 7</option>
+              </select>
+             
+             
+           </div>
+           <div class="hidediv flex moderateur-div"> <p>moderateur :5 </p>
+             <input onkeypress="sendmodirateur(5,event)" class="sml1 form-control names" placeholder="nom 5" type="text" name="" id="n5">
+              <input oninput="sendfontsize(5,this,event)"   min="0" max="300"  class="w300px" type="range" name="" id="" placeholder="fontsize">
+             <input oninput="sendmargin(5,event)"  class="w300px" type="range" max="50" min="0" name="" id="n1"> 
+             <select onchange="sendspisfivtext(event,4)" name="selecttext" id="">
+              <option value="1">tabelt 1</option>
+              <option value="2">tabelt 2</option>
+              <option value="3">tabelt 3</option>
+              <option value="4">tabelt 4</option>
+              <option value="5">tabelt 5</option>
+              <option value="6">tabelt 6</option>
+              <option value="7">tabelt 7</option>
+            </select>
+
+
+           </div> 
+           <div class="hidediv flex moderateur-div"><p>moderateur :6</p>
+              <input onkeypress="sendmodirateur(6,event)"  class="sml1 form-control names" placeholder="nom 6" type="text" name="" id="n6"><input oninput="sendfontsize(6,this,event)" class="w300px"   min="0" max="300"  type="range" name="" id="" placeholder="fontsize">
+              <input oninput="sendmargin(6,event)"  class="w300px" type="range" max="50" min="0" name="" id="n1"> 
+              <select onchange="sendspisfivtext(event,5)" name="selecttext" id="">
+                <option value="1">tabelt 1</option>
+                <option value="2">tabelt 2</option>
+                <option value="3">tabelt 3</option>
+                <option value="4">tabelt 4</option>
+                <option value="5">tabelt 5</option>
+                <option value="6">tabelt 6</option>
+                <option value="7">tabelt 7</option>
+              </select>
+
+
+    </div> 
+    <div class="hidediv flex moderateur-div">
+      <p>moderateur :7</p>
+       <input onkeypress="sendmodirateur(7,event)" class="sml1 form-control names" placeholder="nom 7" type="text" name="" id="n7"><input oninput="sendfontsize(7,this,event)" class="w300px"   min="0" max="300"  type="range" name="" id="" placeholder="fontsize">
+       <input oninput="sendmargin(7,event)" class="sml3 w300px form-control "  placeholder="position 7" type="text" name="" id="n1"> 
+       <select onchange="sendspisfivtext(event,6)" name="selecttext" id="">
+        <option value="1">tabelt 1</option>
+        <option value="2">tabelt 2</option>
+        <option value="3">tabelt 3</option>
+        <option value="4">tabelt 4</option>
+        <option value="5">tabelt 5</option>
+        <option value="6">tabelt 6</option>
+        <option value="7">tabelt 7</option>
+      </select>
+      
+
+      </div>
+<div class="hidediv flex moderateur-div">
+  <p>moderateur :8</p>
+   <input onkeypress="sendmodirateur(8,event)" class="sml1 form-control names" placeholder="nom 8" type="text" name="" id="n6"><input oninput="sendfontsize(8,this,event)" class="w300px"    min="0" max="300"  type="range" name="" id="" placeholder="fontsize">
+   <input oninput="sendmargin(8,event)" class="w300px" type="range" max="50" min="0" name="" id="n1"> 
+   <select onchange="sendspisfivtext(event,7)" name="selecttext" id="">
+    <option value="1">tabelt 1</option>
+    <option value="2">tabelt 2</option>
+    <option value="3">tabelt 3</option>
+    <option value="4">tabelt 4</option>
+    <option value="5">tabelt 5</option>
+    <option value="6">tabelt 6</option>
+    <option value="7">tabelt 7</option>
+  </select>
+
+
+
+  </div>
+<div class="hidediv flex moderateur-div">
+  <p>moderateur :9</p>
+   <input onkeypress="sendmodirateur(9,event)" class="sml1 form-control names" placeholder="nom 9" type="text" name="" id="n6"><input oninput="sendfontsize(9,this,event)" class="w300px"   min="0" max="300"  type="range" name="" id="" placeholder="fontsize">
+   <input oninput="sendmargin(9,event)" class="w300px" type="range" max="50" min="0" name="" id="n1"> 
+   <select onchange="sendspisfivtext(event,8)" name="selecttext" id="">
+    <option value="1">tabelt 1</option>
+    <option value="2">tabelt 2</option>
+    <option value="3">tabelt 3</option>
+    <option value="4">tabelt 4</option>
+    <option value="5">tabelt 5</option>
+    <option value="6">tabelt 6</option>
+    <option value="7">tabelt 7</option>
+  </select>
+
+
+  </div> 
+<div class="hidediv flex moderateur-div">
+  <p>moderateur : 10</p>
+   <input onkeypress="sendmodirateur(10,event)" class="sml1 form-control names" placeholder="nom 10" type="text" name="" id="n6"><input oninput="sendfontsize(10,this,event)" class="w300px"   min="0" max="300"  type="range" name="" id="" placeholder="fontsize">
+   <input oninput="sendmargin(10,event)" class="w300px" type="range" max="50" min="0" name="" id="n1"> 
+   <select onchange="sendspisfivtext(event,9)" name="selecttext" id="">
+    <option value="1">tabelt 1</option>
+    <option value="2">tabelt 2</option>
+    <option value="3">tabelt 3</option>
+    <option value="4">tabelt 4</option>
+    <option value="5">tabelt 5</option>
+    <option value="6">tabelt 6</option>
+    <option value="7">tabelt 7</option>
+  </select>
+   
+
+  </div>
+<div class="hidediv flex moderateur-div">
+  <p>moderateur :11</p>
+   <input onkeypress="sendmodirateur(11,event)" class="sml1 form-control names" placeholder="nom 11" type="text" name="" id="n6"><input oninput="sendfontsize(11,this,event)" class="w300px"   min="0" max="300"  type="range" name="" id="" placeholder="fontsize">
+   <input oninput="sendmargin(11,event)" class="w300px" type="range" max="50" min="0" name="" id="n1"> 
+   <select onchange="sendspisfivtext(event,10)" name="selecttext" id="">
+    <option value="1">tabelt 1</option>
+    <option value="2">tabelt 2</option>
+    <option value="3">tabelt 3</option>
+    <option value="4">tabelt 4</option>
+    <option value="5">tabelt 5</option>
+    <option value="6">tabelt 6</option>
+    <option value="7">tabelt 7</option>
+  </select>
+
+
+  </div>
+<div class="hidediv flex moderateur-div">
+  <p>moderateur :12</p>
+   <input onkeypress="sendmodirateur(12,event)" class="sml1 form-control names" placeholder="nom 12" type="text" name="" id="n6"><input oninput="sendfontsize(12,this,event)" class="w300px"   min="0" max="300"  type="range" name="" id="" placeholder="fontsize">
+   <input oninput="sendmargin(12,event)" class="w300px" type="range" max="50" min="0" name="" id="n1"> 
+  </div> 
+<div class="hidediv flex moderateur-div">
+  <p>moderateur :13</p>
+   <input onkeypress="sendmodirateur(13,event)" class="sml1 form-control names" placeholder="nom 13" type="text" name="" id="n6"><input oninput="sendfontsize(13,this,event)" class="w300px"    min="0" max="300"  type="range" name="" id="" placeholder="fontsize">
+   <input oninput="sendmargin(13,event)" class="w300px" type="range" max="50" min="0" name="" id="n1"> 
+  </div> 
+<div class="hidediv flex moderateur-div">
+  <p>moderateur :14</p>
+   <input onkeypress="sendmodirateur(14,event)" class="sml1 form-control names" placeholder="nom 14" type="text" name="" id="n6"><input oninput="sendfontsize(14,this,event)" class="w300px"   min="0" max="300"  type="range" name="" id="" placeholder="fontsize">
+   <input oninput="sendmargin(14,event)" class="w300px" type="range" max="50" min="0" name="" id="n1"> 
+
+ 
+  </div>
+
+<div class="hidediv flex moderateur-div">
+  <p>moderateur :15</p>
+   <input onkeypress="sendmodirateur(15,event)" class="sml1 form-control names" placeholder="nom 15" type="text" name="" id="n6"><input oninput="sendfontsize(15,this,event)"  class="w300px"  min="0" max="300"  type="range" name="" id="" placeholder="fontsize">
+   <input oninput="sendmargin(15,event)" class="sml3 form-control names w300px"  placeholder="position 1" type="text" name="" id="n1"> 
+
+ 
+
+        
+          
+        </div>
+            
+    <div>
+        <div>
+          <div>
+            <select id="numtab" style=" width: 30%;" class="form-select">
+                <option value="0">tout tablet</option>
+                <option value="1">tablet 1</option>
+                <option value="2">tablet 2</option>
+                <option value="3">tablet 3</option>
+                <option value="4">tablet 4</option>
+                <option value="5">tablet 5</option>
+                <option value="6">tablet 6</option>
+                <option value="7">tablet 7</option>
+                <option value="8">tablet 8</option>
+                <option value="9">tablet 9</option>
+                <option value="10">tablet 10</option>
+                <option value="11">tablet 11</option>
+                <option value="12">tablet 12</option>
+                <option value="13">tablet 13</option>
+                <option value="14">tablet 14</option>
+                <option value="15">tablet 15</option>
+            </select>   <input type="color" onchange="sendColor(event)" name="" > <span style="color: #080a09;">text color</span> 
+
+          </div>
+          <div>
+       <input type="color" onchange="sendbgColor(event)" name="" > <span style="color: #080a09;">background color</span> 
+
+          </div>
+  
+        </div>
+
+       <div style="margin-bottom: 7px; margin-top: 12px;"> <button class="button1 btn btn-primary" onclick="send()" >envoyer</button>
+        <button class="button1 btn btn-primary" onclick="reset()" >reset</button></div>
+        <div><input style=" margin-left: 41%;" type="text" id="inpuvalueall" >  <button class="btn btn-primary" onclick="setsamvalue()">le meme valuer</button> </div>
+
+       
+    
+    </div>
+   
+    </section>
+
+   
+<script src="../uploads/jquery.js"></script>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+const socket =window.io()
+
+
+function sendColor(event){
+            var chatnumber = document.getElementById("numchar")
+            var colorhex=event.target.value
+            socket.emit("setcolor",[numtab.value,colorhex])
+        }
+
+
+        function sendbgColor(event){
+            var numtab = document.getElementById("numtab")
+            var colorhex=event.target.value
+            socket.emit("setbgcolor",[numtab.value,colorhex])
+        }
+
+
+function send(){
+var names =document.getElementsByClassName("names")
+var fontsz =document.getElementsByClassName("fontsz")
+var orionta =document.getElementsByClassName("orionta")
+socket.emit("lesnom",[
+       [names[0].value,fontsz[0].value,orionta[0].value],
+       [names[1].value,fontsz[1].value,orionta[1].value],
+       [names[2].value,fontsz[2].value,orionta[2].value],
+       [names[3].value,fontsz[3].value,orionta[3].value],
+       [names[4].value,fontsz[4].value,orionta[4].value],
+       [names[5].value,fontsz[5].value,orionta[5].value],
+       [names[6].value,fontsz[6].value,orionta[6].value],
+       [names[7].value,fontsz[7].value,orionta[7].value],
+       [names[8].value,fontsz[8].value,orionta[8].value],
+       [names[9].value,fontsz[9].value,orionta[9].value],
+       [names[10].value,fontsz[10].value,orionta[10].value],
+       [names[11].value,fontsz[11].value,orionta[11].value],
+       [names[12].value,fontsz[12].value,orionta[12].value],
+       [names[13].value,fontsz[13].value,orionta[13].value],
+       [names[14].value,fontsz[14].value,orionta[14].value],
+
+
+])
+}
+
+
+
+function sendspisfivtext(evaluetarget ,i){ 
+  
+  var txt;
+ 
+  if(i==0){
+
+txt=document.getElementsByClassName("names")[0].value
+
+}
+
+
+if(i==1){
+
+   txt=document.getElementsByClassName("names")[1].value
+
+}
+if(i==2){
+  txt=document.getElementsByClassName("names")[2].value
+
+}
+if(i==3){
+  txt=document.getElementsByClassName("names")[3].value
+
+}
+if(i==4){
+  txt=document.getElementsByClassName("names")[4].value
+
+}
+if(i==5){
+  txt=document.getElementsByClassName("names")[5].value
+
+}
+if(i==6){
+  txt=document.getElementsByClassName("names")[6].value
+
+}
+if(i==7){
+  txt=document.getElementsByClassName("names")[7].value
+
+}
+if(i==8){
+  txt=document.getElementsByClassName("names")[8].value
+
+}
+if(i==9){
+  txt=document.getElementsByClassName("names")[9].value
+
+}
+  
+
+
+//socket.emit("retateinfo",[indexT,selectob.value])  
+     alert(txt)
+      socket.emit("texttotablet",[evaluetarget.target.value,txt])  
+
+   }
+
+
+
+function sendmargin(m,event){ 
+  //
+  //if(event.key==="Enter"){
+  //alert(event.target.value+" this is new position for tablet "+ m)
+  socket.emit("positionmoneteur",[m,event.target.value])  
+  //}
+}
+
+
+
+
+function sendfontsize(indexfont ,selectinput,e){ 
+  //
+//  if(e.key==="Enter" ){
+  //alert(e.target.value+" this is new font for tablet "+ indexfont)
+  socket.emit("fontsize",[indexfont,e.target.value])  
+  //}
+}
+
+
+
+
+function sendmodirateur(indexmodi,e){ 
+  //
+  if(e.key==="Enter"){
+  alert(e.target.value+" this is new modirateur for tablet "+ indexmodi)
+  socket.emit("lesmodirateur",[indexmodi,e.target.value])  
+  }
+}
+
+function reset(){
+    var names =document.getElementsByClassName("names")
+    var fontsz =document.getElementsByClassName("fontsz")
+    var orionta =document.getElementsByClassName("orionta")
+
+
+for (let i = 0; i < names.length; i++) {
+    names[i].value="";
+    fontsz[i].value="120";
+    orionta[i].value="0";
+    
+}
+  
+}
+
+
+function setsamvalue(){
+    var inpuvalueall=document.getElementById("inpuvalueall").value
+    var names =document.getElementsByClassName("names")
+    var siz =document.getElementsByClassName("fontsz")
+        for (let i = 0; i < names.length; i++) {
+            names[i].value=inpuvalueall;   
+            siz[i].value=160
+        }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Function to add a moderator div
+function addModerateur() {
+    $('.moderateur-div:hidden:first').css("display","flex"); // Show the first hidden moderator div
+}
+
+// Function to remove a moderator div
+function removeModerateur() {
+    $('.moderateur-div:visible:last').hide(); // Hide the last visible moderator div
+}
+</script>
+
+</body>
+</html>
